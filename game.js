@@ -38,32 +38,26 @@ randomise()
 function randomise(){
     let value = Math.ceil(Math.random() * 5)                           //this changes the value randomly
 
-
-    switch(value){
-        case(0):
+    if(value === 0){
         randomise();
-        
-        case(1):
+    }
+    else if(value === 1){
         num3 = num1 + num2;
-        break;
-        
-        case(2):
+    }
+    else if(value === 2){
         num3 = num1 - num2;
-        break;
-        
-        case(3):
+    }
+    else if(value === 3){
         num3 = num1 * num2;
-        break;
-        
-        case(4):
+    }
+    else if(value === 4){
         num3 = (num1 / num2).toPrecision(1);
-        break;
-    
-        case(5):
+    }
+    else if(value === 5){
         num3 = num1 % num2;
-        break;
     }
     number3.innerHTML = num3;                                       //the number is changed now using innerHTML
+
 }
 
 // Iteration 6: Making the Operators (button) functional
@@ -161,4 +155,30 @@ function resettimer(timetracking){
 
 
 toRunTimer(); // calling the timer's function to make it work
+
+// if you want to use switch instead of if else 
+// switch(value){
+//     case(0):
+//     randomise();
+    
+//     case(1):
+//     num3 = num1 + num2;
+//     break;
+    
+//     case(2):
+//     num3 = num1 - num2;
+//     break;
+    
+//     case(3):
+//     num3 = num1 * num2;
+//     break;
+    
+//     case(4):
+//     num3 = (num1 / num2).toPrecision(1);
+//     break;
+
+//     case(5):
+//     num3 = num1 % num2;
+//     break;
+// }
 
