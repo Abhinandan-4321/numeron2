@@ -71,7 +71,7 @@ plus.addEventListener("click", () =>{
         randomise();
     }
     else{
-        location.href = "./gameover.html";
+        location.href = "./gameover.html?score=" + score; 
     }
 
 })
@@ -84,7 +84,7 @@ minus.addEventListener("click", () =>{
         randomise();
     }
     else{
-        location.href = "./gameover.html";
+        location.href = "./gameover.html?score=" + score; 
     }
 })
 
@@ -96,7 +96,7 @@ mul.addEventListener("click", () =>{
         randomise();
     }
     else{
-        location.href = "./gameover.html";
+        location.href = "./gameover.html?score=" + score; 
     }
 })
 
@@ -108,7 +108,7 @@ divide.addEventListener("click", () =>{
         randomise();
     }
     else{
-        location.href = "./gameover.html";
+        location.href = "./gameover.html?score=" + score; 
     }
 })
 
@@ -117,10 +117,10 @@ modulus.addEventListener("click", () =>{
         score++;                                              // score is incremented
         resettimer(timerun);                                  // the timer is reset
         toGetRandomNumber();                                  // the random number functio is invoked again to give new random numbers
-        randomise();                                          // and the radomise funtion is invoked which helps in changing the value of number 3
+        randomise();                                          // and the randomise funtion is invoked which helps in changing the value of number 3
     }
     else{
-        location.href = "./gameover.html";                   // else the game goes to gameover page
+        location.href = "./gameover.html?score=" + score;                   // else the game goes to gameover page
     }
 })
     
@@ -138,11 +138,11 @@ function toRunTimer(){
         time--;
         if(time == 0)
         {
-            location.href = "./gameover.html"
+            location.href = "./gameover.html?score=" + score; 
         }
         timer.innerHTML = time;
     },1000)
-    localStorage.setItem("score", score)                        // the score here is store din the local storage so that it can be retrieved 
+    // localStorage.setItem("score", score)                        // the score here is store din the local storage so that it can be retrieved 
 }                                                               // in the page where the score is displayed   
 
 function resettimer(timetracking){
